@@ -1,0 +1,30 @@
+:root{
+  --theme-color: rgba(58, 143, 121, 1);
+  --theme-color-transparency: rgba(58, 143, 121,0.7);
+  --theme-dep-color: rgba(16, 93, 76, 1);
+  --theme-dep-color-transparency: rgba(16, 93, 76, 0.7);
+
+  --main-bg-color: #e9f3f2;
+  --table-header-bg:#F3FBF8;
+
+  --info-color:#55A1E8;
+  --initial-color:#7FC5DB;
+  --success-color:#80DB7F;
+  --fail-color:#E88686;
+  
+
+  --cn-font-family:'Microsoft YaHei';
+  /* //中文字体 */
+  --en-font-family:'DIN';
+  /* //英文字体 */
+}
+// 加载动画
+.ant-spin-nested-loading{
+  .ant-spin-dot i{
+    background-color: var(--theme-color); 
+  
+  }
+  .ant-spin-text{
+    color: var(--theme-color); 
+  }
+}

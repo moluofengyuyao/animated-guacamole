@@ -1,0 +1,36 @@
+/* a-tree树 */
+.ant-tree {
+  padding-top: 20px!important;
+  .ant-tree-switcher {
+    color: rgba(0, 0, 0, .45);
+    background: #ffffff;
+  }
+  .ant-tree-switcher-noop{
+    background: url('@/assets/images/index/circle.png') no-repeat center center!important;
+  }
+  .ant-tree-switcher-line-icon {
+    display: none!important;
+  }
+  .ant-tree-node-selected {
+    background-color: var(--theme-color) !important; 
+    color: #ffffff !important; 
+    .ant-tree-title {
+      color: #ffffff !important; 
+    }
+  }
+  .ant-tree-node-content-wrapper {
+    border-radius: 0px!important;
+    .ant-tree-title {
+      color: var(--theme-dep-color); 
+    }
+  }
+  .ant-tree-node-content-wrapper:hover{
+    background-color: var(--theme-color) !important ;
+    span{
+      color: #ffffff !important;
+    }
+  }
+  .ant-tree-node-content-wrapper:not(:hover){
+    color: var(--theme-color); 
+  }
+}

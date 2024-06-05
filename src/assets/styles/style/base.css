@@ -1,0 +1,73 @@
+/* 富文本编辑器 */
+.ql-editor{
+  resize: vertical;
+  min-height: 200px;
+}
+.quill-editor{
+  height: auto !important;
+  display: inline-block;
+}
+.ql-container{
+  height: auto !important;
+  min-height: 100px;
+}
+
+/* 弹窗 */
+.el-dialog {
+  padding: 0px !important;
+}
+.el-dialog__header {
+  border-bottom: 1px solid #ddd !important;
+  padding: 11px 20px !important;
+}
+.el-dialog__title {
+  color: var(--theme-color) !important;
+  border-bottom: 2px solid !important;
+  padding-bottom: 10px !important;
+}
+.el-dialog__close{
+  color: #909399 !important;
+}
+.el-dialog__body{
+  padding: 5px 0 !important;
+}
+.el-dialog__footer{
+  padding: 10px 20px 20px !important;
+}
+/* 删除提示 */
+.del-dialog {
+  .el-dialog__body{
+    padding: 20px 20px 0 !important;
+  }
+}
+/* 附件列表 */
+/* .file-list-item {
+  display: inline-block !important;
+} */
+/* 表格 */
+.el-table .el-table__header tr th{
+  background-color: var(--table-header-bg) !important; 
+  background: var(--table-header-bg) !important; 
+  color: #333333 !important;
+}
+/* .el-select__selected-item{
+  width: 100%;
+} */
+.el-tag{
+  background-color: #f4f4f5 !important;
+  border-color: #e9e9eb !important;
+  color: #909399 !important;
+  margin-left: 3px !important;
+  margin-top: 3px !important;
+  .el-tag__content{
+    margin: 2px;
+  }
+  .el-tag__close{
+    color: #909399 !important;
+    background-color: #c0c4cc !important;
+  }
+  .el-tag__close:hover{
+    color: #ffffff !important;
+    background-color: #909399!important;
+  }
+}

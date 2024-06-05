@@ -1,0 +1,32 @@
+ stages:
+  - deploy
+  
+ variables:
+  # GIT_SUBMODULE_STRATEGY: recursive
+
+ job 157-master:
+  stage: deploy
+  tags: 
+   - 157-share
+  script:
+   - nvm use 16.16.0
+   # 配置V8 最大内存限制默认2G至8G
+   - export NODE_OPTIONS=--max-old-space-size=8912
+   - PACKAGE_HASH=($(md5sum package.json))
+   - module_CACHE=/home/gitlab-runner/node-module/$CI_PROJECT_NAME-$CI_COMMIT_REF_SLUG/module_${PACKAGE_HASH}.tar.gz
+   - |
+       if [ -f $module_CACHE ]; then
+         echo '使用缓存'
+         tar xf $module_CACHE;
+       else
+         echo '不使用缓存'
+         npm i --force
+         mkdir -p /home/gitlab-runner/node-module/$CI_PROJECT_NAME-$CI_COMMIT_REF_SLUG
+         tar czf - ./node_modules > $module_CACHE;
+       fi
+   - npm run build:dev
+   - mkdir -p /data/app/xtgc/cth_web/ddgl/bak/$CURRENT_DATETIME
+   - rm -rf /data/app/xtgc/cth_web/ddgl/assets && rm -rf /data/app/xtgc/cth_web/ddgl/static && rm -rf /data/app/xtgc/cth_web/ddgl/index.html
+   - cp -r ./dist/* /data/app/xtgc/cth_web/ddgl/
+  only: 
+   - master

@@ -1,0 +1,370 @@
+
+
+.greenStyleGeneral{
+  --theme-color: #3A8E7C;
+  --theme-color-opacity: rgba(58, 142, 124,0.7);
+  --theme-dep-color: #105D4C;
+  --base-bth-color: rgba(58,142,124,0.22);
+  --base-bg-color: #e9f3f2;
+  --table-header-bg:#F3FBF8;
+
+    /* element改变主题色变量 */
+    $--color-primary: #3A8E7C ;
+
+    // // /* 改变 icon 字体路径变量，必需 */
+    $--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+    // @import 'element-ui/lib/theme-chalk/index.css';
+    // @import "~element-ui/packages/theme-chalk/src/index";
+  
+  /* element样式************************************** */
+  .el-select {
+    .el-input.is-focus .el-input__inner{
+      border-color:var(--theme-color) !important; 
+    }
+  }
+  .el-select-dropdown .el-select-dropdown__wrap{
+    // 下拉框弹窗样式
+    .el-select-dropdown__item.selected{
+      color: var(--theme-color) !important;
+    
+    }
+  }
+  .el-input .el-input__inner{
+    &:focus,
+    &:hover{
+      border-color:var(--theme-color) !important;
+    }
+  }
+  
+  .el-textarea .el-textarea__inner{
+    &:focus,
+    &:hover{
+      border-color:var(--theme-color) !important;
+    }
+  }
+  .el-picker-panel .el-date-table .available span{
+    color: var(--theme-color-opacity);
+  }
+  .el-picker-panel .el-date-table .available:not(.disabled):not(.end-date):not(.start-date) span:hover{
+    color: var(--theme-color) !important;
+  }
+  // .el-picker-panel .el-date-table td.current:not(.disabled) span{
+  //   background-color: var(--theme-color) !important; 
+  // }
+  .el-picker-panel .el-date-table .current span,
+  .el-picker-panel .el-date-table .end-date span,
+  .el-picker-panel .el-date-table .start-date span{
+    color: #fff !important;
+    background-color: var(--theme-color) ;
+  }
+
+  .el-dropdown .el-dropdown-link i{
+    color: var(--theme-color) !important;
+  }
+ 
+  .el-button--primary{
+    background-color: var(--base-bth-color) !important; 
+    color: var(--theme-color) !important;
+    border: none ;
+   }
+  .el-button--text{
+    color: var(--theme-color) !important;
+   }
+  .el-button--default:hover{
+    color: var(--theme-color) ;
+   }
+
+  .el-button--primary:not(.is-disabled):hover{
+    background-color: var(--theme-color) !important;
+    color: #fff !important;
+  }
+  .el-dropdown-menu{
+    .el-dropdown-menu__item:hover{
+      background-color: var(--base-bth-color) !important;
+      color: var(--theme-color) !important;
+    }
+  }
+  /* 表格 */
+  .el-table .el-table__header tr th{
+    background-color: var(--table-header-bg) !important; 
+    background: var(--table-header-bg) !important; 
+  }
+
+  /* tab页 */
+  .el-tabs {
+    .el-tabs__header .el-tabs__nav-wrap .el-tabs__nav{
+      .el-tabs__active-bar{
+        background-color: var(--theme-color) !important; 
+    
+      }
+      .el-tabs__item{
+        color: var(--theme-color) !important; 
+      }
+    
+    }
+  
+  }
+  // *****
+  .el-checkbox{
+    &.is-checked{
+      .el-checkbox__label,
+      .el-checkbox__inner{
+        color: var(--theme-color) !important;
+      }
+      .el-checkbox__inner{
+        background-color: var(--theme-color) !important;
+      }
+      
+    }
+    .el-checkbox__input.is-indeterminate .el-checkbox__inner{
+      border-color: var(--theme-color) !important;
+      background-color: var(--theme-color) !important;
+    
+    }
+    .el-checkbox__inner:hover{
+      border-color: var(--theme-color) !important;
+     }
+  }
+  /* 开关 */
+  .el-switch{
+    /* background-color: rgba(0, 0, 0, 0.04); */
+  }
+  .el-switch.is-checked .el-switch__core{
+    background-color: var(--theme-color) !important;
+    border: none !important; 
+  }
+
+  /* el-radio-group */
+  .el-radio-button.is-active .el-radio-button__inner{
+    background-color: var(--theme-color) !important;
+    color: #fff !important; 
+  }
+  .el-radio-button:not(.is-active) .el-radio-button__inner:hover{
+    color: var(--theme-color)  !important; //未选中悬停变绿
+  }
+
+  .el-pagination .el-pager li.active{
+    color: var(--theme-color) !important;
+  }
+  
+  .el-table{
+    .ascending .sort-caret.ascending{
+      border-bottom-color: var(--theme-color) !important;
+    }
+    .descending .sort-caret.descending{
+      border-top-color: var(--theme-color) !important;
+    }
+  }
+  .el-tag .el-tag__close:hover{
+    background-color: var(--theme-color);
+  }
+  /* 树************ */
+  .ant-tree{
+    .ant-tree-child-tree .ant-tree-node-content-wrapper:not(:hover),
+    li .ant-tree-node-content-wrapper:not(:hover){
+      color: var(--theme-color); 
+    }
+    li .ant-tree-node-content-wrapper.ant-tree-node-selected{
+      background-color: var(--theme-color) !important; 
+      color: #fff !important; 
+    }
+    .ant-tree-child-tree .ant-tree-node-content-wrapper:hover{
+      background-color: var(--theme-color) !important ;
+      & span{
+        color: #fff !important;
+      }
+    }
+  }
+  .el-loading-spinner .path{
+    stroke:var(--theme-color); 
+  }
+  .el-loading-spinner .el-loading-text{
+    color: var(--theme-color); 
+  }
+
+  // label::selection,
+  // a::selection,
+  // p::selection,
+  // span::selection,
+  // div::selection{
+  //   background: var(--theme-color); 
+  //   color: #fff; //复制背景色
+  // }
+  // 菜单页
+  #homePage{
+    background: url('~@/assets/images/gjStyle/home/mainmenuBG.jpg') center 100% no-repeat !important;
+    .zszxLogo{
+      width: 65% !important;
+      height: 83px !important;
+      background-image: url('~@/assets/images/gjStyle/home/logo1.png') !important;
+      top: 20% !important;
+      left: 50% !important;
+      transform: translate(-50%, -50%) !important;
+    
+    }
+    .mainHeard{
+      display: none !important;
+    }
+    .head_portraitDiv1{
+      top: calc(20% + 40px);
+      right:18%;
+      line-height: 30px;
+    }
+    .ksrk{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      grid-gap: 2rem;
+      .modelCk {
+        width: 100%!important;
+        height: 100%!important;
+        img{
+          width: 100px;
+          padding: 30px 50px 50px 50px;
+        }
+      }    
+      .model-item{
+        width: 30%;
+        box-shadow: 2px 3px 10px 1px rgba(0,68,53,0.1);
+        background: #FFFFFF;
+      }
+      .modelText{
+        color:#333333;
+      }
+    }
+    .appDownloadDiv{
+      display: none;
+    }
+  }
+  .head_portrait{
+    background-image: url('~@/assets/images/gjStyle/home.png') !important; //头像
+  }
+  .head_portrait1{
+    background-image: url('~@/assets/images/gjStyle/man.png') !important; //头像
+  }
+  /* 侧边栏********************************************** */
+  .thenavbar{
+    background-image: url('~@/assets/images/gjStyle/asidedBG.png') !important;
+    background-size: 100% 100% !important;
+    background-repeat: no-repeat !important;
+    .thenavbarul  .thenavbarli span{
+      background: transparent !important; 
+     }
+  }
+  /*定义滚动条*/
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--base-bth-color) !important;
+  }
+
+  /* 头部********************************************** */
+  .header{
+    border-color: var(--theme-color) !important;
+    .headerBottomCon .header-right {
+      .m-head-router .m-head-router-btn{
+        .u-router{
+          color: var(--theme-color) !important;
+        }
+        .u-router-active{
+          // 头部选中
+          background-color: transparent  !important;
+          background-image: url('~@/assets/images/gjStyle/navCheckedOn.png') ;
+          background-size: 100% 100% ;
+          background-repeat: no-repeat ;
+          color: #fff !important;
+          i{
+            color: #fff !important;
+          }
+        }
+      }
+    
+      // ##########头部个人信息
+      .headright-right .headright-right-left,
+      .headright-right .headright-right-left .message-manage i,
+      .headright-right .name-cont{
+        color: var(--theme-color) ;
+      }
+      
+     .iconfont{
+      color: var(--theme-color) ;
+      }
+    }
+  }
+  // ############区划树
+  #xzqhTree .xzqhTitle{
+    background: linear-gradient(to right, #DEF4EF, #fff);
+    border-left: 3px solid var(--theme-color);
+    color: var(--theme-color);
+  }
+  // #######自定义的全部按钮
+  // .isallButton{
+  //   /* 全部按钮 */
+  //   color: #fff !important;
+  //   background-color: var(--theme-color) !important;
+  // }
+  // .pdfButton{
+  //   background-color: var(--theme-color) !important;
+  // }
+  .compassenginegl-ctrl button.compassenginegl-ctrl-fullscreen .compassenginegl-ctrl-icon,
+  .fullTableScreenButton .mapboxgl-ctrl-fullscreen,
+  .fullScreenButton .mapboxgl-ctrl-fullscreen {
+    background-image: url('~@/assets/images/gjStyle/fullscreen.svg') !important;
+  
+  }
+  .compassenginegl-ctrl button.compassenginegl-ctrl-shrink .compassenginegl-ctrl-icon,
+  .fullTableScreenButton .mapboxgl-ctrl-shrink ,
+  .fullScreenButton .mapboxgl-ctrl-shrink {
+    background-image: url('~@/assets/images/gjStyle/notfullscreen.svg') !important;
+  }
+  .mapbox-gl-draw_polygon {
+    background-image: url('~@/assets/images/gjStyle/square.svg') !important;
+  }
+  .mapbox-gl-draw_trash {
+    background-image: url('~@/assets/images/gjStyle/icons.svg') !important;
+  }
+  .detail_right_dl dt{
+    color: var(--theme-color)  !important;
+  }
+  .titleDiv{
+    color: var(--theme-color)  !important;
+    border-color: var(--theme-color)  !important;
+  }
+  .xzqh_btn {
+  // 左侧树显示隐藏
+    background: url("~@/assets/images/gjStyle/packUp.png") center no-repeat !important;
+  }
+  // .czButton{
+  //   // 表格操作列
+  //   color: var(--theme-color)  !important;
+  // }
+  .notMapFull{
+   background-image: url('~@/assets/images/gjStyle/notMapFull.svg') !important;
+  }
+  .m-backlist-icon{
+    background-image: url('~@/assets/images/gjStyle/backlist.svg') !important;
+  }
+  // .close-btn{
+  // //  编辑数据表格关闭按钮
+  //   // background: var(--theme-color)  !important;
+  //   &:hover{
+  //     background: var(--base-bth-color)  !important;
+  //     color: var(--theme-color) !important;
+  //   }
+  // }
+
+  @media screen and (max-width: 1533px){
+    #homePage  .zszxLogo{
+      width: 65% !important;
+      height: 60px !important;
+      top: 20% !important;
+    }
+  }
+
+
+
+}
+
+
+
+
